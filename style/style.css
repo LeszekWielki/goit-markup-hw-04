@@ -11,6 +11,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   box-sizing: border-box;
+  width: 1600px;
 }
 
 :root {
@@ -19,13 +20,33 @@ body {
   --background2: #f5f4fa;
   --change-hover: #2196f3;
   --background_buttons: #f5f4fa;
+  --inative: #afb1b8;
 }
 /*  start hover/focus section */
 .first_div a:hover,
+a:hover svg,
 .footer a:hover,
 .first_div a:focus,
 .footer a:focus {
   color: var(--change-hover);
+  fill: var(--change-hover);
+  cursor: pointer;
+}
+.icon_group:hover {
+  color: var(--change-hover);
+  fill: var(--change-hover);
+  border: 1px solid var(--change-hover);
+  cursor: pointer;
+}
+.circle_icon:hover {
+  background-color: var(--change-hover);
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon_figcaption svg:hover {
+  fill: white;
 }
 
 .container {
@@ -56,7 +77,9 @@ a {
   top: 80px;
 }
 .section_main {
-  background-color: var(--background);
+  background-image: linear-gradient(to right, #2f303a66 100%, #2f303a66 100%),
+    url(/images/meeting.jpg);
+  /* fill: solid #2f303a66; */
 }
 .nav {
   text-decoration: none;
@@ -76,18 +99,21 @@ a {
 
 .contact {
   text-decoration: none;
+  margin-right: 371px;
 }
 
 .mail_head {
   color: #757575;
   letter-spacing: 2%;
-  padding-left: 371px;
-  padding-right: 50px;
+  margin-right: 50px;
+
+  display: flex;
 }
 
 .tel_head {
   color: #757575;
   letter-spacing: 2%;
+  display: flex;
 }
 
 .head_heading {
@@ -122,7 +148,7 @@ a {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   width: 270px;
-  height: 368px;
+  /* height: 368px; */
   margin-bottom: 94px;
 }
 
@@ -146,6 +172,8 @@ a {
 .footer {
   background-color: var(--background);
   padding: 60px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .second_logo {
@@ -264,8 +292,8 @@ a {
 }
 
 .portfolio_box {
-  width: 370px;
-  border: 1px solid rgba(238, 238, 238, 1);
+  width: 372px;
+  border: 1px solid #eeeeee;
 }
 
 .caption {
@@ -282,7 +310,7 @@ a {
 
 /* To jest dobrze */
 li .portfolio {
-  padding: 0 46px;
+  margin: 0 46px;
 }
 
 .first_div {
@@ -291,10 +319,10 @@ li .portfolio {
 }
 
 .header_box {
-  border-bottom: 1px solid rgba(236, 236, 236, 1);
+  border-bottom: 1px solid #ececec;
 }
 .navi_header {
-  padding-left: 93px;
+  margin-left: 93px;
 }
 
 .list,
@@ -374,4 +402,129 @@ header .first_div {
   gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 94px;
+}
+
+.icon {
+  width: 26px;
+  height: 16px;
+  fill: #757575;
+  margin: 0%;
+}
+
+.telephone_icon {
+  display: inline-flex;
+  /* border: 1px solid rgb(41, 29, 135); */
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .our_clients {
+  border: solid 1px red;
+} */
+
+.icon_list {
+  list-style: none;
+  display: flex;
+  /* border: 1px solid rebeccapurple; */
+  justify-content: center;
+}
+.icon_group {
+  /* position: relative; */
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--inative);
+  border-radius: 4px;
+  padding: 16px 32px;
+  fill: var(--inative);
+}
+.color_icon use {
+  fill: white;
+}
+
+.color_icon {
+  fill: white;
+}
+.icon_list li {
+  margin: 0 15px 94px 15px;
+}
+
+.icon_figcaption svg {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  fill: var(--inative);
+  /* border: 1px solid red; */
+}
+
+.icon_figcaption {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.icon_figcaption li {
+  margin: 16px 5px 30px 5px;
+}
+
+.circle_icon {
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff1a;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.icon_footer svg {
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  /* fill: var(--inative); */
+}
+
+.icon_footer {
+  display: flex;
+  list-style: none;
+  margin-top: 15px;
+}
+
+.second_footer_cont {
+  margin-left: 70px;
+}
+
+.wrap {
+  display: flex;
+}
+
+.h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 12px;
+}
+
+.lorem_icon {
+  width: 270px;
+  height: 120px;
+  /* border: 1px solid red; */
+  padding: 25px 100px;
+  border-radius: 4px;
+  background: #f5f4fa;
+  margin-bottom: 30px;
+}
+
+.navi_img li:hover {
+  box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
+    0px 1px 1px 0px #0000001f;
+  cursor: pointer;
 }
